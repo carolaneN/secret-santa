@@ -1,4 +1,5 @@
 @import 'tailwindcss';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 /*
   The default border color has changed to `currentColor` in Tailwind CSS v4,
@@ -15,5 +16,16 @@
   ::backdrop,
   ::file-selector-button {
     border-color: var(--color-gray-200, currentColor);
+  }
+
+  :root {
+    --primaryClr: #D70008;
+    --secondaryClr: #D4B193;
+    --terciary-Clr: #317463;
+    --quaternary-Clr: #003E29;
+  }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
   }
 }
