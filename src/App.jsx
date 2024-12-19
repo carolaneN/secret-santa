@@ -89,7 +89,7 @@ export default function App() {
             <AssignmentDisplay assignments={assignments} />
             <div className="mt-6">
               <button className="button w-full" onClick={resetApp}>
-                Réattribuer
+                Recommencer
               </button>
             </div>
           </>
