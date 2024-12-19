@@ -52,7 +52,7 @@ export default function App() {
   };
 
   return (
-    <div className="">
+    <div className="bg-pine-santa">
       <div className="flex flex-col gap-8">
         
         {currentScreen === "welcome" && (
