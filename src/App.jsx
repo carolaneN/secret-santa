@@ -51,8 +51,8 @@ export default function App() {
   };
 
   return (
-    <div className="container mx-auto p-4">
-      <div>
+    <div className="container">
+      <div className="flex flex-col gap-8">
         
         {currentScreen === "welcome" && (
           <WelcomeScreen onStart={() => setCurrentScreen("input")} />
@@ -60,7 +60,11 @@ export default function App() {
         
         {currentScreen === "input" && (
           <>
-            <h2 className="text-2xl font-bold mb-6 text-center">
+          <section className="relative flex flex-col py-8 mb-8 items-center justify-center">
+            <p className="text-xl font-black uppercase text-pine-santa">Secret Santa</p>
+            <img src="guirlande.svg" alt="Guirlandes" className="absolute top-0.5"/>
+          </section>
+            <h2 className="text-lg font-bold text-center uppercase">
               Ajoutez les participants
             </h2>
             <ParticipantInput
@@ -71,6 +75,7 @@ export default function App() {
             <div className="mt-6">
               <button className="button w-full" onClick={distributeGifts}>
                 Distribuer les cadeaux
+                <img src="kdo.svg" alt="Cadeaux" />
               </button>
             </div>
           </>
@@ -78,7 +83,7 @@ export default function App() {
         
         {currentScreen === "assignments" && (
           <>
-            <h2 className="text-2xl font-bold mb-6 text-center">
+            <h2 className="text-lg font-bold text-center uppercase">
               Attributions des cadeaux
             </h2>
             <AssignmentDisplay assignments={assignments} />
