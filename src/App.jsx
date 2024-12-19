@@ -60,8 +60,8 @@ export default function App() {
         )}
         
         {currentScreen === "input" && (
-          <div className="flex flex-col h-screen md:w-1/2 md:rounded-r-3xl pb-7 justify-between bg-white overflow-hidden overflow-y-scroll">
-          <section className="relative flex flex-col py-8 mb-8 md:mb-36 md:py-5 items-center justify-center">
+          <div className="flex flex-col gap-4 h-screen md:w-1/2 md:rounded-r-3xl pb-7 justify-between bg-white overflow-hidden overflow-y-scroll">
+          <section className="relative flex flex-col py-8 mb-8 md:mb-30 md:py-5 items-center justify-center">
             <p className="text-xl font-black uppercase text-pine-santa">Secret Santa</p>
             <img src="guirlande.svg" alt="Guirlandes" className="absolute top-0.5 md:top-0 md:w-11/12"/>
           </section>
@@ -83,10 +83,10 @@ export default function App() {
         )}
         
         {currentScreen === "assignments" && (
-          <div className="flex flex-col h-screen pb-7 md:w-1/2 md:rounded-r-3xl justify-between bg-white overflow-hidden overflow-y-scroll">
-          <section className="relative flex flex-col py-8 mb-8 items-center justify-center">
+          <div className="flex flex-col gap-4 h-screen pb-7 md:w-1/2 md:rounded-r-3xl justify-between bg-white md:overflow-hidden md:overflow-y-scroll">
+          <section className="relative flex flex-col py-8 mb-8 md:mb-30 items-center justify-center">
             <p className="text-xl font-black uppercase text-pine-santa">Secret Santa</p>
-            <img src="guirlande.svg" alt="Guirlandes" className="absolute top-0.5"/>
+            <img src="guirlande.svg" alt="Guirlandes" className="absolute top-0.5 md:top-0 md:w-11/12"/>
           </section>
             <h2 className="text-lg font-bold text-center uppercase">
               Attributions des cadeaux
