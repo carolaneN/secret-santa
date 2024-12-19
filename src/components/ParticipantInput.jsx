@@ -4,7 +4,7 @@
 // Il prend en props une fonction pour supprimer un participant : onRemoveParticipant
 
 import { useState } from "react";
-import Input_ from "postcss/lib/input";
+// import Input_ from "postcss/lib/input";
 
 export function ParticipantInput({
   participants,

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { WelcomeScreen } from "./components/WelcomeScreen";
 import { ParticipantInput } from "./components/ParticipantInput";
 import { AssignmentDisplay } from "./components/AssignmentDisplay";
+import { Button } from "./components/Button";
 
 export default function App() {
   // Tableau des participants
@@ -51,7 +52,7 @@ export default function App() {
   };
 
   return (
-    <div className="container">
+    <div className="">
       <div className="flex flex-col gap-8">
         
         {currentScreen === "welcome" && (
@@ -73,7 +74,7 @@ export default function App() {
               onRemoveParticipant={removeParticipant}
             />
             <div className="mt-6">
-              <button className="button w-full" onClick={distributeGifts}>
+              <button className="button w-full cursor-pointer" onClick={distributeGifts}>
                 Distribuer les cadeaux
                 <img src="kdo.svg" alt="Cadeaux" />
               </button>
@@ -83,14 +84,16 @@ export default function App() {
         
         {currentScreen === "assignments" && (
           <>
+          <section className="relative flex flex-col py-8 mb-8 items-center justify-center">
+            <p className="text-xl font-black uppercase text-pine-santa">Secret Santa</p>
+            <img src="guirlande.svg" alt="Guirlandes" className="absolute top-0.5"/>
+          </section>
             <h2 className="text-lg font-bold text-center uppercase">
               Attributions des cadeaux
             </h2>
             <AssignmentDisplay assignments={assignments} />
-            <div className="mt-6">
-              <button className="button w-full" onClick={resetApp}>
-                Recommencer
-              </button>
+            <div className="flex w-full justify-center my-8">
+              <Button onClick={resetApp} input="Recommencer"></Button>
             </div>
           </>
         )}
