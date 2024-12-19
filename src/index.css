@@ -17,6 +17,8 @@
   --color-pale-santa: #D4B193;
   --color-green-santa: #317463;
   --color-pine-santa: #003E29;
+
+  --background-image-christmas: url("noel-img.jpg");
 }
 
 @layer base {
@@ -35,6 +37,8 @@
     --color-pale-santa: #D4B193;
     --color-green-santa: #317463;
     --color-pine-santa: #003E29;
+
+    --background-image-christmas: url("noel-img.jpg");
   }
 
   body {
