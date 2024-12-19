@@ -10,9 +10,9 @@ export function AssignmentDisplay({ assignments }) {
             <span>{assignment.giver}</span>
           </section>
 
-          <div className="h-px w-8 bg-black "></div>
+          <div className="h-px md:h-0.5 w-8 md:w-16 bg-black "></div>
           <img src="kdo_seul.svg" alt="" />
-          <div className="h-px w-8 bg-black "></div>
+          <div className="h-px md:h-0.5 w-8 md:w-16 bg-black "></div>
             
 
           <section className="flex flex-col justify-center items-center h-20 w-20 rounded bg-pale-santa">
