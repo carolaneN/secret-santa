@@ -52,7 +52,7 @@ export default function App() {
   };
 
   return (
-    <div className="bg-pine-santa md:bg-christmas md:bg-cover md:bg-left h-full w-full">
+    <div className="bg-pine-santa h-full w-full">
       <div className="flex flex-col gap-8 w-full h-full">
         
         {currentScreen === "welcome" && (
@@ -60,10 +60,10 @@ export default function App() {
         )}
         
         {currentScreen === "input" && (
-          <div className="flex flex-col gap-4 h-screen md:w-1/2 md:rounded-r-3xl pb-7 justify-between bg-white overflow-hidden overflow-y-scroll">
-          <section className="relative flex flex-col py-8 mb-8 md:mb-30 md:py-5 items-center justify-center">
-            <p className="text-xl font-black uppercase text-pine-santa">Secret Santa</p>
-            <img src="guirlande.svg" alt="Guirlandes" className="absolute top-0.5 md:top-0 md:w-11/12"/>
+          <div className="flex flex-col gap-4 h-screen md:w-1/2 md:rounded-r-3xl pb-7 justify-between bg-white md:overflow-hidden md:overflow-y-scroll">
+          <section className="relative flex flex-col py-8 md:py-5 items-center justify-center">
+            <p className="text-3xl md:text-xl font-black uppercase text-pine-santa">Secret Santa</p>
+            <img src="guirlande.svg" alt="Guirlandes" className=""/>
           </section>
             <h2 className="text-lg font-bold text-center uppercase">
               Ajoutez les participants
@@ -73,7 +73,7 @@ export default function App() {
               participants={participants}
               onRemoveParticipant={removeParticipant}
             />
-            <div className="mt-6">
+            <div className="mt-6 pb-7">
               <button className="button flex flex-col justify-center items-center w-full cursor-pointer" onClick={distributeGifts}>
                 Distribuer les cadeaux
                 <img src="kdo.svg" alt="Cadeaux" className="w-1/2" />
@@ -84,15 +84,15 @@ export default function App() {
         
         {currentScreen === "assignments" && (
           <div className="flex flex-col gap-4 h-screen pb-7 md:w-1/2 md:rounded-r-3xl justify-between bg-white md:overflow-hidden md:overflow-y-scroll">
-          <section className="relative flex flex-col py-8 mb-8 md:mb-30 items-center justify-center">
+          <section className="relative flex flex-col py-8 items-center justify-center">
             <p className="text-xl font-black uppercase text-pine-santa">Secret Santa</p>
-            <img src="guirlande.svg" alt="Guirlandes" className="absolute top-0.5 md:top-0 md:w-11/12"/>
+            <img src="guirlande.svg" alt="Guirlandes" className=""/>
           </section>
             <h2 className="text-lg font-bold text-center uppercase">
               Attributions des cadeaux
             </h2>
             <AssignmentDisplay assignments={assignments} />
-            <div className="flex w-full justify-center my-8">
+            <div className="flex w-full justify-center my-8 pb-7">
               <Button onClick={resetApp} input="Recommencer"></Button>
             </div>
           </div>
