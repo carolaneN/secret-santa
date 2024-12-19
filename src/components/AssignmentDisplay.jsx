@@ -2,7 +2,7 @@
 // Il prend en props le tableau d'assignments
 export function AssignmentDisplay({ assignments }) {
   return (
-    <ul className="flex flex-col space-y-2 gap-4">
+    <ul className="flex flex-col space-y-2 gap-4 bg-white">
       {assignments.map((assignment, index) => (
         <li className="flex w-full justify-between items-center px-6" key={index}>
           <section className="flex flex-col justify-center items-center h-20 w-20 rounded bg-pale-santa">

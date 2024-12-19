@@ -52,18 +52,18 @@ export default function App() {
   };
 
   return (
-    <div className="bg-pine-santa">
-      <div className="flex flex-col gap-8">
+    <div className="bg-pine-santa h-full w-full">
+      <div className="flex flex-col gap-8 w-full h-full">
         
         {currentScreen === "welcome" && (
           <WelcomeScreen onStart={() => setCurrentScreen("input")} />
         )}
         
         {currentScreen === "input" && (
-          <>
-          <section className="relative flex flex-col py-8 mb-8 items-center justify-center">
+          <div className="flex flex-col h-screen md:w-1/2 md:rounded-r-3xl pb-7 justify-between bg-white ">
+          <section className="relative flex flex-col py-8 mb-8 md:py-5 items-center justify-center">
             <p className="text-xl font-black uppercase text-pine-santa">Secret Santa</p>
-            <img src="guirlande.svg" alt="Guirlandes" className="absolute top-0.5"/>
+            <img src="guirlande.svg" alt="Guirlandes" className="absolute top-0.5 md:top-0"/>
           </section>
             <h2 className="text-lg font-bold text-center uppercase">
               Ajoutez les participants
@@ -74,16 +74,16 @@ export default function App() {
               onRemoveParticipant={removeParticipant}
             />
             <div className="mt-6">
-              <button className="button w-full cursor-pointer" onClick={distributeGifts}>
+              <button className="button flex flex-col justify-center items-center w-full cursor-pointer" onClick={distributeGifts}>
                 Distribuer les cadeaux
-                <img src="kdo.svg" alt="Cadeaux" />
+                <img src="kdo.svg" alt="Cadeaux" className="w-1/2" />
               </button>
             </div>
-          </>
+          </div>
         )}
         
         {currentScreen === "assignments" && (
-          <>
+          <div className="flex flex-col h-screen pb-7 md:w-1/2 md:rounded-r-3xl justify-between bg-white">
           <section className="relative flex flex-col py-8 mb-8 items-center justify-center">
             <p className="text-xl font-black uppercase text-pine-santa">Secret Santa</p>
             <img src="guirlande.svg" alt="Guirlandes" className="absolute top-0.5"/>
@@ -95,7 +95,7 @@ export default function App() {
             <div className="flex w-full justify-center my-8">
               <Button onClick={resetApp} input="Recommencer"></Button>
             </div>
-          </>
+          </div>
         )}
       </div>
     </div>

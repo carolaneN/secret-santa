@@ -24,7 +24,7 @@ export function ParticipantInput({
   };
 
   return (
-    <div className="space-y-4 px-5">
+    <div className="flex flex-col justify-between space-y-4 px-5 bg-white">
       <div className="flex items-center space-x-2 px-4 py-3 bg-pine-santa rounded-full">
         <input
           type="text"
